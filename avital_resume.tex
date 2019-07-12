@@ -1,5 +1,4 @@
 
-
 %% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
@@ -19,17 +18,18 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.78]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 \usepackage{import}
 \usepackage{color}
+\usepackage{enumitem}
 \usepackage{geometry}
 % personal data
 \name{Pierre}{Avital}
 \title{}                               % optional, remove / comment the line if not wanted
-\address{1bis rue Jean Mermoz}{78500}{Sartrouville}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\address{1bis rue Jean Mermoz}{78500}{Sartrouville}% optional, remove / comment the line if not wanted; the "post-code city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+33630824860}                   % optional, remove / comment the line if not wanted
 %\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
@@ -45,13 +45,13 @@
 %\makeatother
 %\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
 
-% bibliography with mutiple entries
+% bibliography with multiple entries
 %\usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
-\geometry{bottom=1cm,top=2.5cm}
+\geometry{bottom=2.5cm,top=2.5cm}
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
@@ -61,36 +61,60 @@
 \put(190,-11){\color{gray}French -- Swiss}
 \makecvtitle
 
-\small{Receiving both an \textbf{Engineer's Degree in Mobile Technologies and Embedded Systems} and a \textbf{Master's Degree in Information Systems Security} in September this year, I am currently looking for a position, and would be available to start in the end of October. I am currently focusing on research as my professional goal.}
+% \small{Receiving both an \textbf{Engineer's Degree in Mobile Technologies and Embedded Systems} and a \textbf{Master's Degree in Information Systems Security} in September this year, I am currently looking for a position, and would be available to start in the end of October. I am currently focusing on research as my professional goal. }
+\small{}
 
 \section{Professional Experience}
 
 \vspace{6pt}
 
 % \begin{itemize}
+% \item
+{\cventry{Nov 2017 -- Present}{Research Engineer}{Valeo CDA / Centrale-SupElec}{Créteil / Gif-sur-Yvettes, France}{Radio Source Localisation in Complex Environments}{\vspace{3pt}
+With the endgoal of enabling smartphones to function as passive keys for vehicules, I was tasked with researching localisation methods for current generation smartphones. 
+\\
+The two main constraints of this research were the precision of the localisation, as overly lenient localisation would lead to high insurance costs; and non-cooperativeness, as no alterations were to be made to the smartphones for this function to be provided. Power consumption constraints had already bounded the project into relying solely on Bluetooth LE for both communicating with and locating the smartphone. 
+\\
+Due to my versatility in programming and networking, I was also routinely tasked with providing the means to enable the various sub-systems or the project to interract over a diverse set of mediums under varying constraints.
+Overall, I was lead to:
+\begin{itemize}[leftmargin=2em, itemsep=0em, topsep=0em, parsep=0em]
+    \item Study, implement and evaluate techniques for Radio Source Localisation, such as MUSIC and ESPRIT.
+    \item Define and implement various protocols to provide better and more flexible reliability mechanisms.
+    \item Interface a tacheometer to local network and providing user-friendly calibration procedures to build a Local Positioning System for collection of ground-truth measurements for both training and evaluation of localisation algorithms.
+    \item Provide software interfacing with various measurement equipement for remote and automated data collection.
+\end{itemize}
+\textit{Technologies : Bluetooth LE, Embedded Systems, DSP, Antenna Networks\\Languages : Python, C, C++, Rust}}}
+
+\vspace{6pt}
 
 % \item
-{\cventry{Feb 2017 -- Aug 2017}{Internship: Connected Vehicules Security}{Pôle Judiciaire de la Gendarmerie Nationale}{Pontoise, France}{}{\vspace{3pt}Starting with the Reverse Engineering of Android applications, the subject evolved towards the use of Software Defined Radios to listen to Bluetooth communications.
-During RE phase, I studied closed-source Android applications through the use of commercially available tools, before developing my own plugin to integrate open-source tools into the Atom Text Editor, implementing most of the functions of commercial static RE tools, and integrating them as well as a debugger to Atom's UI.
-During BT phase, I modified drivers, firmware and gateware of open source SDR projects to tailor them to the very specific signal processing needs that come with Bluetooth's physical layer and real time computation requirements on wide-band signals.\\\textit{Technologies : Atom, ADB, JDB, GNU Radio, Quartus Prime, FPGA, Gateware, Firmware, DSP, Sans-fil\\Languages : Smali (Java Assembly), JavaScript, Bash, Python, VHDL}}}
+{\cventry{Feb 2017 -- Aug 2017}{Internship: Connected Vehicules Security}{Pôle Judiciaire de la Gendarmerie Nationale}{Pontoise, France}{}{\vspace{3pt}Starting with the Reverse Engineering (RE) of Android applications, the subject evolved towards the use of Software Defined Radios to listen to Bluetooth communications.\\
+During RE phase, I studied closed-source Android applications through the use of commercially available tools, before developing my own plugin to integrate open-source tools into the Atom Text Editor, implementing most of the functions of commercial static RE tools, and integrating them as well as a debugger to Atom's UI.\\
+During BT phase, I modified drivers, firmware and gateware of open source SDR projects to tailor them to the very specific signal processing needs that come with Bluetooth's physical layer and real time computation requirements on wide-band signals.
+\\\textit{Technologies : Atom, ADB, JDB, GNU Radio, Quartus Prime, FPGA, Gateware, Firmware, DSP, Wireless\\Languages : Smali (Java Assembly), JavaScript, Bash, Python, VHDL}}}
 
 \vspace{6pt}
 
 % \item
 {\cventry{Sep 2015 -- Feb 2016}{Internship: Business Opportunity Development}{Castrol innoVentures}{Reading, UK}{}{\vspace{3pt}Inside a team comprised of 8 interns of diverse origin and background and myself, I was tasked with developping new business opportunities for Castrol, following methods commonly used by start-ups.
-As the person with the widest scientifical background, I also took the role of scientific consultant for my team, studying the feasability of some of the projects we developped.}}
+As the person with the widest scientifical background, I also took the role of scientific consultant for my team, studying the feasability of some of the projects we developped. }}
 
 % \end{itemize}
-
+\newpage
 \section{Academics}
 
 \vspace{5pt}
 
-\subsection{Degrees}
+\subsection{Scholarship}
 
 \vspace{5pt}
 
 % \begin{itemize}
+
+% \item
+{\cventry{Sep 2018--Present}{PhD Student}{Laboratoire des Signaux et Systèmes, Centrale Supélec}{Gif-sur-Yvettes, France}{}{From September 2018 onward, my work as Research Engineer for Valeo was paired with working as a PhD student at Centrale Supélec's Laboratory of Signals and Systems. The goal for this was to reenforce ongoing studies for the Valeo project with a more scientifically rigorous approach, notably to the optimisation of measurement characteristics. }}
+
+\vspace{6pt}
 
 % \item
 {\cventry{2011--2017}{Ingénieur Technologies Mobiles Systèmes Embarqués / Master Sécurité des SI}{Université de Technologie de Troyes}{Troyes, France}{}{Building solid foundations in Physics, Chemistry and Mathematics through the preparatory courses, I have taken a particular interest in low-level computer science and signal processing. To complete my training, I decided to take up computer security, and took a liking to cryptography.}}
@@ -117,62 +141,57 @@ As the person with the widest scientifical background, I also took the role of s
 
 \vspace{3pt}
 
-\small{Developped in C#, the goal for this library was to analyse music in real time in order to tie game mechanics to it. This goal later shifted to the translation of music to MIDI or musical scores.}
-
-\vspace{6pt}
-
-\item{Danish!}
-
-\vspace{3pt}
-
-\small{Following a Waterfall process, we implemented the "Danish" card game using the MVC design pattern in Java.}
+\small{Developped in C\#, the goal for this library was to analyse music in real time in order to tie game mechanics to it. This goal later shifted to the translation of music to MIDI or musical scores.}
 
 \end{itemize}
-\newpage
+
+
+
+% \newpage
 \section{Skillset}
 
 \vspace{6pt}
 
-\begin{itemize}
+\begin{itemize}[itemsep=0em, topsep=0em, parsep=0em]
 
 \item \textbf{Languages} 
-\begin{itemize}
-\item French : Mother tongue
-\item English : Fluent, with knowledge of scientifical and technological vocabularies. BULATS C1 (2012), Erasmus C2 (2016), 9 months spent in english-speaking countries, including 6 as an intern in Reading, UK.
-\item German : Basics. B1/B2. 1 month spent in german-speaking countries.
-\item Japanese : Basics. 3 weeks spent in Japan in 2014.
+\begin{itemize}[itemsep=0em, topsep=0em, parsep=0em]
+\item \textbf{French}: Mother tongue
+\item \textbf{English}: Fluent, with knowledge of scientific and technological vocabularies. BULATS C1 (2012), Erasmus C2 (2016), 9 months spent in english-speaking countries, including 6 as an intern in Reading, UK.
+\item \textbf{German}: Basics. B1/B2. 1 month spent in german-speaking countries.
+\item \textbf{Japanese}: Basics. 3 weeks spent in Japan in 2014, renewed in 2017.
 \end{itemize}
 
 \vspace{6pt}
 
-\item \textbf{Programming (frequent use) :} C/C++, C\#, Java, MATLAB, Python, Javascript.
-\item \textbf{Programming (occasionnal use) :} Bash, Smali, VHDL, HTML, CSS, Prolog, CLIPS...
+\item \textbf{Programming (favorites) :} Rust, C/C++, Python, Javascript.
+\item \textbf{Programming (occasional use) :} Bash, Java, Smali, MATLAB, HTML, CSS...
+\item \textbf{Surface level :} VHDL, Prolog, LISP...
 
 \vspace{6pt}
 
 \item \textbf{Software}
-\begin{itemize}
+\begin{itemize}[itemsep=0em, topsep=0em, parsep=0em]
 \item Operating Systems : Frequent use of MacOS, Windows and Debian-based Linuces.
 \item Office : Microsoft Office, iWork, Google Docs, \LaTeX
 \item Video editing : Adobe Premiere, iMovie
 \item IDE : Visual Studio, XCode, IntelliJ, Xilinx SDK, Atom+Plugins, GNU Radio Companion
-\item 3D : Solidworks, PTC Creo
 \end{itemize}
 
 \vspace{6pt}
 
 \item \textbf{Others}
-\begin{itemize}
+\begin{itemize}[itemsep=0em, topsep=0em, parsep=0em]
 \item \textbf{Electronics} : Digital and analogical signal processing. Linking microprocessors to sensors and motors.
-\item \textbf{Signal processing} : Image processing, steganography, watermarking. Sound processing and analysis, with basic knowledge of psycho-acoustics.
-\item \textbf{Reverse Engineering} : Improved through the developpement of a RE-assisting plugin. Android/Java focused.
+\item \textbf{Signal processing} : Image processing, steganography, watermarking. Sound processing and analysis, with basic knowledge of psycho-acoustics. Inverse Problems.
+\item \textbf{Reverse Engineering} : Improved through the development of a RE-assisting plugin. Android/Java focused.
 \item \textbf{Wireless} : Information and Communication theory. Understanding of Software-Defined Radios.
 \end{itemize}
 
 \vspace{6pt}
 
 \item \textbf{Hobbies}
-\begin{itemize}
+\begin{itemize}[itemsep=0em, topsep=0em, parsep=0em]
 \item \textbf{Music} : Originally trained in violin and music theory, I currently play the guitar.
 \item \textbf{Computers} : I program for my own use, and go to great length to tailor my OS to my needs.
 \end{itemize}
